@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -29,7 +29,7 @@
     }
     .radio-group {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
       gap: 1rem;
     }
     .radio-card {
@@ -130,15 +130,15 @@
           <div class="radio-group" style="margin-bottom: 2rem;">
             <label class="radio-card selected">
               <input type="radio" name="storage-type" value="Personal" checked>
-              <span>🏠 Personal & Household</span>
+              <span>ðŸ  Personal & Household</span>
             </label>
             <label class="radio-card">
               <input type="radio" name="storage-type" value="Business">
-              <span>💼 Commercial / Business</span>
+              <span>ðŸ’¼ Commercial / Business</span>
             </label>
             <label class="radio-card">
               <input type="radio" name="storage-type" value="Vehicle">
-              <span>🚗 Vehicle & Boat</span>
+              <span>ðŸš— Vehicle & Boat</span>
             </label>
           </div>
 
@@ -176,7 +176,7 @@
             <span class="error-msg">Please enter your full name.</span>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <div class="contact-grid" style="gap: 1.5rem; margin-bottom: 1.5rem;">
             <div class="form-group">
               <label for="user-email" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Email Address *</label>
               <input type="email" id="user-email" placeholder="email@address.com" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
@@ -317,5 +317,11 @@
       }
     });
   </script>
+  <!-- Mobile Sticky Footer -->
+  <div class="mobile-sticky-footer">
+    <a href="contact.html" class="sticky-btn sticky-book">Book Now</a>
+    <a href="enquire.html" class="sticky-btn sticky-enquire">Enquiry Now</a>
+  </div>
 </body>
 </html>
+
