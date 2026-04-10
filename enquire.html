@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Your Unit | Storage Demo Self Storage</title>
+  <meta name="description" content="Book or enquire about a self storage unit securely. Select your storage type, sizing, and rental duration easily with Storage Demo.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styles for Enquiry Form */
+    .form-section {
+      background: var(--bg-white);
+      padding: 2.5rem;
+      border-radius: var(--radius-lg);
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .form-section h3 {
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+    }
+    .radio-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .radio-card {
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .radio-card input[type="radio"] {
+      display: none;
+    }
+    .radio-card:hover {
+      border-color: var(--accent);
+      background-color: rgba(16, 185, 129, 0.03);
+    }
+    .radio-card.selected {
+      border-color: var(--accent);
+      background-color: rgba(16, 185, 129, 0.08);
+      color: var(--accent-hover);
+      font-weight: 600;
+    }
+    .form-group.has-error input,
+    .form-group.has-error select,
+    .form-group.has-error textarea {
+      border-color: #ef4444 !important;
+      background-color: #fef2f2 !important;
+    }
+    .error-msg {
+      color: #ef4444;
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+      display: none;
+    }
+    .form-group.has-error .error-msg {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 10.99H19C18.47 14.87 15.68 18.34 12 19.46V11H5V6.3L12 3.19V10.99Z"/>
+          </svg>
+          Storage Demo
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html#services">Services</a>
+          <a href="index.html#features">Features</a>
+          <a href="index.html#units">Storage Units</a>
+          <a href="about.html">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="enquire.html" class="btn btn-primary" style="color: white; padding: 10px 24px;">Enquire Now</a>
+        </div>
+
+        <button class="hamburger" aria-label="Toggle Navigation">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero" style="min-height: 35vh; display: flex; align-items: center; padding: 100px 0 60px 0;">
+    <div class="container">
+      <div class="hero-content animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Book or Enquire About A Space</h1>
+        <p style="font-size: 1.15rem; opacity: 0.9;">Tell us precisely what you're looking for, and we will secure your preferred dates with an instant initial quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Booking Form -->
+  <section style="padding: 4rem 0;">
+    <div class="container" style="max-width: 800px;">
+      
+      <form id="booking-form" novalidate>
+        
+        <!-- Section 1: Storage Needs -->
+        <div class="form-section animate-on-scroll">
+          <h3>1. Storage Purpose & Requirements</h3>
+          
+          <label style="display: block; font-weight: 500; margin-bottom: 1rem; color: var(--primary);">Storage Type *</label>
+          <div class="radio-group" style="margin-bottom: 2rem;">
+            <label class="radio-card selected">
+              <input type="radio" name="storage-type" value="Personal" checked>
+              <span>🏠 Personal & Household</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="storage-type" value="Business">
+              <span>💼 Commercial / Business</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="storage-type" value="Vehicle">
+              <span>🚗 Vehicle & Boat</span>
+            </label>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="unit-size" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Desired Unit Size *</label>
+            <select id="unit-size" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit; background: var(--bg-white);">
+              <option value="">-- Please Select --</option>
+              <option value="Small (25 sq ft)">Small Unit (25 sq ft) - Fits 50 boxes</option>
+              <option value="Medium (50 sq ft)">Medium Unit (50 sq ft) - Fits contents of 1-bed flat</option>
+              <option value="Large (100 sq ft)">Large Unit (100 sq ft) - Fits contents of 2-bed house</option>
+              <option value="Extra Large (150+ sq ft)">Extra Large (150+ sq ft) - Full household / Business Pallets</option>
+            </select>
+            <span class="error-msg">Please choose an appropriate unit size.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="duration" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Estimated Duration *</label>
+            <select id="duration" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit; background: var(--bg-white);">
+              <option value="">-- Please Select --</option>
+              <option value="Less than 1 month">Short Term (Less than 1 month)</option>
+              <option value="1 to 6 months">Flexible (1 to 6 months)</option>
+              <option value="More than 6 months">Long Term (More than 6 months)</option>
+            </select>
+            <span class="error-msg">Please select your intended duration.</span>
+          </div>
+        </div>
+
+        <!-- Section 2: Personal Details -->
+        <div class="form-section animate-on-scroll">
+          <h3>2. Your Contact Details</h3>
+          
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="first-name" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Full Name *</label>
+            <input type="text" id="first-name" placeholder="E.g., Jane Smith" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
+            <span class="error-msg">Please enter your full name.</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label for="user-email" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Email Address *</label>
+              <input type="email" id="user-email" placeholder="email@address.com" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
+              <span class="error-msg">Please enter a valid email.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="user-phone" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Phone Number *</label>
+              <input type="tel" id="user-phone" placeholder="(555) 000-0000" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
+              <span class="error-msg">Please enter a contact number.</span>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label for="additional-notes" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Special Requests or Move-in Dates</label>
+            <textarea id="additional-notes" rows="4" placeholder="Any details that help us place you in the perfect unit..." style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit; resize: vertical;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.15rem; padding: 15px 0;">Request Reservation & Rates</button>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Floating Toast Success Notification -->
+  <div id="toast">Your reservation request has been received! Our local manager will confirm availability within 2 business hours.</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Storage Demo</h4>
+          <p style="color: #94a3b8; margin-bottom: 1.5rem;">Secure local storage units for households, businesses, and vehicles. Modern security and exceptional convenience.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#services">Our Services</a></li>
+            <li><a href="index.html#units">View Units</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Storage Needs</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#units">Personal Self Storage</a></li>
+            <li><a href="index.html#units">Business Warehousing</a></li>
+            <li><a href="index.html#units">Vehicle & Boat Parking</a></li>
+            <li><a href="index.html#units">Student Mini-Lockers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Support</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Storage Demo Self Storage. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Radio buttons custom selection toggle
+    document.querySelectorAll('.radio-card').forEach(card => {
+      card.addEventListener('click', function() {
+        document.querySelectorAll('.radio-card').forEach(c => c.classList.remove('selected'));
+        this.classList.add('selected');
+        const radio = this.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+      });
+    });
+
+    // Custom Booking Form Validation
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("booking-form");
+      const toast = document.getElementById("toast");
+
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          let isValid = true;
+
+          const sizeInput = document.getElementById("unit-size");
+          const durationInput = document.getElementById("duration");
+          const nameInput = document.getElementById("first-name");
+          const emailInput = document.getElementById("user-email");
+          const phoneInput = document.getElementById("user-phone");
+
+          [sizeInput, durationInput, nameInput, emailInput, phoneInput].forEach(el => {
+            el.parentElement.classList.remove("has-error");
+          });
+
+          if (!sizeInput.value) {
+            sizeInput.parentElement.classList.add("has-error");
+            isValid = false;
+          }
+          if (!durationInput.value) {
+            durationInput.parentElement.classList.add("has-error");
+            isValid = false;
+          }
+          if (!nameInput.value.trim()) {
+            nameInput.parentElement.classList.add("has-error");
+            isValid = false;
+          }
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(emailInput.value.trim())) {
+            emailInput.parentElement.classList.add("has-error");
+            isValid = false;
+          }
+          if (!phoneInput.value.trim()) {
+            phoneInput.parentElement.classList.add("has-error");
+            isValid = false;
+          }
+
+          if (isValid) {
+            toast.classList.add("show");
+            form.reset();
+            document.querySelectorAll('.radio-card').forEach((c, idx) => {
+              if (idx === 0) c.classList.add('selected');
+              else c.classList.remove('selected');
+            });
+            setTimeout(() => {
+              toast.classList.remove("show");
+            }, 4000);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
