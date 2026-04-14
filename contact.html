@@ -1,290 +1,325 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Storage Demo Self Storage</title>
-  <meta name="description" content="Get in touch with Storage Demo Self Storage for any queries regarding our secure personal, commercial, and vehicle storage units.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Add extra style for contact form validation state and map */
-    .form-group.has-error input,
-    .form-group.has-error textarea {
-      border-color: #ef4444 !important;
-      background-color: #fef2f2 !important;
-    }
-    .error-msg {
-      color: #ef4444;
-      font-size: 0.85rem;
-      margin-top: 0.25rem;
-      display: none;
-    }
-    .form-group.has-error .error-msg {
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Storage Demo Self Storage</title>
+    <meta name="description"
+        content="Get in touch with Storage Demo Self Storage for any queries regarding our secure personal, commercial, and vehicle storage units.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add extra style for contact form validation state and map */
+        .form-group.has-error input,
+        .form-group.has-error textarea {
+            border-color: #ef4444 !important;
+            background-color: #fef2f2 !important;
+        }
+
+        .error-msg {
+            color: #ef4444;
+            font-size: 0.85rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-group.has-error .error-msg {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Navigation Bar -->
-  <header>
-    <div class="container">
-      <nav>
-        <a href="index.html" class="logo">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 10.99H19C18.47 14.87 15.68 18.34 12 19.46V11H5V6.3L12 3.19V10.99Z"/>
-          </svg>
-          Storage Demo
-        </a>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM12 10.99H19C18.47 14.87 15.68 18.34 12 19.46V11H5V6.3L12 3.19V10.99Z" />
+                    </svg>
+                    Storage Demo
+                </a>
 
-        <!-- Desktop Navigation Links -->
-        <div class="nav-links">
-          <a href="index.html#services">Services</a>
-          <a href="index.html#features">Features</a>
-          <a href="index.html#units">Storage Units</a>
-          <a href="about.html">About Us</a>
-          <a href="faq.html">FAQ</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="enquire.html" class="btn btn-primary" style="color: white; padding: 10px 24px;">Enquire Now</a>
+                <!-- Desktop Navigation Links -->
+                <div class="nav-links">
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#units">Storage Units</a>
+                    <a href="about.html">About Us</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="enquire.html" class="btn btn-primary" style="color: white; padding: 10px 24px;">Enquire
+                        Now</a>
+                </div>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="hamburger" aria-label="Toggle Navigation">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </nav>
         </div>
+    </header>
 
-        <!-- Mobile Hamburger Menu Button -->
-        <button class="hamburger" aria-label="Toggle Navigation">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Contact Hero Section -->
-  <section class="hero" style="min-height: 40vh; display: flex; align-items: center; padding: 100px 0 60px 0;">
-    <div class="container">
-      <div class="hero-content animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Get In Touch With Storage Demo</h1>
-        <p style="font-size: 1.15rem; opacity: 0.9;">Have a question about sizing, availability, or commercial logistics? Reach out directly via phone, email, or our contact form.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Contact Layout -->
-  <section class="contact-section" style="padding: 4rem 0;">
-    <div class="container">
-      <div class="contact-grid" style="align-items: start;">
-        
-        <!-- Column 1: Contact Details & Info -->
-        <div class="animate-on-scroll">
-          <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">We're Here to Help</h2>
-          <p style="color: var(--text-muted); margin-bottom: 2rem;">Our self-storage specialists are available seven days a week to ensure you get exactly the right size unit with zero hidden fees.</p>
-
-          <!-- Contact Options Stack -->
-          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <div style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent);">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                  <path d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 0.25rem;">Phone Us</h4>
-                <p style="color: var(--text-muted);">+1 (800) 555-SAFE</p>
-              </div>
+    <!-- Contact Hero Section -->
+    <section class="hero" style="min-height: 40vh; display: flex; align-items: center; padding: 100px 0 60px 0;">
+        <div class="container">
+            <div class="hero-content animate-on-scroll" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1 style="font-size: 3rem; margin-bottom: 1rem;">Get In Touch With Storage Demo</h1>
+                <p style="font-size: 1.15rem; opacity: 0.9;">Have a question about sizing, availability, or commercial
+                    logistics? Reach out directly via phone, email, or our contact form.</p>
             </div>
-
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <div style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent);">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 0.25rem;">Email Us</h4>
-                <p style="color: var(--text-muted);">support@StorageDemostorage.com</p>
-              </div>
-            </div>
-
-            <div style="display: flex; align-items: center; gap: 1rem;">
-              <div style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent);">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                </svg>
-              </div>
-              <div>
-                <h4 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 0.25rem;">Our Location</h4>
-                <p style="color: var(--text-muted);">1240 Storage Demo Parkway, Boxville, CA 90210</p>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Embedded Map Visual Placeholder -->
-          <div style="margin-top: 3rem; background: #e2e8f0; height: 250px; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; box-shadow: var(--shadow-md);">
-            <svg viewBox="0 0 24 24" width="48" height="48" fill="#64748b" style="opacity: 0.5;">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-            </svg>
-            <span style="position: absolute; bottom: 15px; background: rgba(255,255,255,0.85); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 500; color: var(--primary);">Interactive Map Offline</span>
-          </div>
-
         </div>
+    </section>
 
-        <!-- Column 2: Enhanced Contact Form with Validation -->
-        <div class="animate-on-scroll" style="background: var(--bg-white); padding: 3rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
-          <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem;">Send a Message</h3>
-          <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">Please fill out the details below. Required fields are marked with an asterisk (*).</p>
+    <!-- Main Contact Layout -->
+    <section class="contact-section" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="contact-grid" style="align-items: start;">
 
-          <form id="enhanced-contact-form" novalidate>
-            <!-- Full Name -->
-            <div class="form-group" style="margin-bottom: 1.5rem;">
-              <label for="contact-name" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Full Name *</label>
-              <input type="text" id="contact-name" placeholder="John Doe" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
-              <span class="error-msg">Please enter your full name.</span>
+                <!-- Column 1: Contact Details & Info -->
+                <div class="animate-on-scroll">
+                    <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 1.5rem;">We're Here to Help</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Our self-storage specialists are available
+                        seven days a week to ensure you get exactly the right size unit with zero hidden fees.</p>
+
+                    <!-- Contact Options Stack -->
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div
+                                style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent);">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path
+                                        d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 0.25rem;">Phone Us
+                                </h4>
+                                <p style="color: var(--text-muted);">+1 (800) 555-SAFE</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div
+                                style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent);">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 0.25rem;">Email Us
+                                </h4>
+                                <p style="color: var(--text-muted);">support@StorageDemostorage.com</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div
+                                style="width: 50px; height: 50px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent);">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.1rem; color: var(--primary); margin-bottom: 0.25rem;">Our
+                                    Location</h4>
+                                <p style="color: var(--text-muted);">1240 Storage Demo Parkway, Boxville, CA 90210</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Embedded Map Visual Placeholder -->
+                    <div
+                        style="margin-top: 3rem; height: 250px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <iframe width="100%" height="100%" frameborder="0" style="border:0"
+                            src="https://www.google.com/maps?q=London,UK&output=embed" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+                <!-- Column 2: Enhanced Contact Form with Validation -->
+                <div class="animate-on-scroll"
+                    style="background: var(--bg-white); padding: 3rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);">
+                    <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 0.5rem;">Send a Message</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">Please fill out the
+                        details below. Required fields are marked with an asterisk (*).</p>
+
+                    <form id="enhanced-contact-form" novalidate>
+                        <!-- Full Name -->
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="contact-name"
+                                style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Full
+                                Name *</label>
+                            <input type="text" id="contact-name" placeholder="John Doe" required
+                                style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
+                            <span class="error-msg">Please enter your full name.</span>
+                        </div>
+
+                        <!-- Email Address -->
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="contact-email"
+                                style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Email
+                                Address *</label>
+                            <input type="email" id="contact-email" placeholder="john@example.com" required
+                                style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
+                            <span class="error-msg">Please enter a valid email address.</span>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group" style="margin-bottom: 1.5rem;">
+                            <label for="contact-phone"
+                                style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Phone
+                                Number *</label>
+                            <input type="tel" id="contact-phone" placeholder="(555) 123-4567" required
+                                style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
+                            <span class="error-msg">Please provide a phone number.</span>
+                        </div>
+
+                        <!-- Message / Inquiry -->
+                        <div class="form-group" style="margin-bottom: 2rem;">
+                            <label for="contact-message"
+                                style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Message
+                                *</label>
+                            <textarea id="contact-message" rows="5"
+                                placeholder="Tell us about what you need to store, moving dates, or any custom requests..."
+                                required
+                                style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit; resize: vertical;"></textarea>
+                            <span class="error-msg">Message cannot be left empty.</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
+                    </form>
+                </div>
+
             </div>
+        </div>
+    </section>
 
-            <!-- Email Address -->
-            <div class="form-group" style="margin-bottom: 1.5rem;">
-              <label for="contact-email" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Email Address *</label>
-              <input type="email" id="contact-email" placeholder="john@example.com" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
-              <span class="error-msg">Please enter a valid email address.</span>
+    <!-- Floating Toast Success Notification -->
+    <div id="toast">Message successfully sent! Our support team will get back to you shortly.</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Storage Demo</h4>
+                    <p style="color: #94a3b8; margin-bottom: 1.5rem;">Secure local storage units for households,
+                        businesses, and vehicles. Modern security and exceptional convenience.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Our Services</a></li>
+                        <li><a href="index.html#units">View Units</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Storage Needs</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#units">Personal Self Storage</a></li>
+                        <li><a href="index.html#units">Business Warehousing</a></li>
+                        <li><a href="index.html#units">Vehicle & Boat Parking</a></li>
+                        <li><a href="index.html#units">Student Mini-Lockers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal & Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- Phone Number -->
-            <div class="form-group" style="margin-bottom: 1.5rem;">
-              <label for="contact-phone" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Phone Number *</label>
-              <input type="tel" id="contact-phone" placeholder="(555) 123-4567" required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit;">
-              <span class="error-msg">Please provide a phone number.</span>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Storage Demo Self Storage. All rights reserved.</p>
             </div>
-
-            <!-- Message / Inquiry -->
-            <div class="form-group" style="margin-bottom: 2rem;">
-              <label for="contact-message" style="display: block; font-weight: 500; margin-bottom: 0.5rem; color: var(--primary);">Message *</label>
-              <textarea id="contact-message" rows="5" placeholder="Tell us about what you need to store, moving dates, or any custom requests..." required style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-family: inherit; resize: vertical;"></textarea>
-              <span class="error-msg">Message cannot be left empty.</span>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
-          </form>
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </section>
+    <script src="script.js"></script>
+    <script>
+        // Custom Contact Form Validation
+        document.addEventListener("DOMContentLoaded", () => {
+            const contactForm = document.getElementById("enhanced-contact-form");
+            const toast = document.getElementById("toast");
 
-  <!-- Floating Toast Success Notification -->
-  <div id="toast">Message successfully sent! Our support team will get back to you shortly.</div>
+            if (contactForm) {
+                contactForm.addEventListener("submit", (e) => {
+                    e.preventDefault();
+                    let isValid = true;
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Storage Demo</h4>
-          <p style="color: #94a3b8; margin-bottom: 1.5rem;">Secure local storage units for households, businesses, and vehicles. Modern security and exceptional convenience.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#services">Our Services</a></li>
-            <li><a href="index.html#units">View Units</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Support</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Storage Needs</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#units">Personal Self Storage</a></li>
-            <li><a href="index.html#units">Business Warehousing</a></li>
-            <li><a href="index.html#units">Vehicle & Boat Parking</a></li>
-            <li><a href="index.html#units">Student Mini-Lockers</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Legal & Support</h4>
-          <ul class="footer-links">
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Storage Demo Self Storage. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+                    // Target elements
+                    const nameInput = document.getElementById("contact-name");
+                    const emailInput = document.getElementById("contact-email");
+                    const phoneInput = document.getElementById("contact-phone");
+                    const messageInput = document.getElementById("contact-message");
 
-  <script src="script.js"></script>
-  <script>
-    // Custom Contact Form Validation
-    document.addEventListener("DOMContentLoaded", () => {
-      const contactForm = document.getElementById("enhanced-contact-form");
-      const toast = document.getElementById("toast");
+                    // Reset error styles
+                    [nameInput, emailInput, phoneInput, messageInput].forEach(el => {
+                        el.parentElement.classList.remove("has-error");
+                    });
 
-      if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          let isValid = true;
+                    // Validate Name
+                    if (!nameInput.value.trim()) {
+                        nameInput.parentElement.classList.add("has-error");
+                        isValid = false;
+                    }
 
-          // Target elements
-          const nameInput = document.getElementById("contact-name");
-          const emailInput = document.getElementById("contact-email");
-          const phoneInput = document.getElementById("contact-phone");
-          const messageInput = document.getElementById("contact-message");
+                    // Validate Email Pattern
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(emailInput.value.trim())) {
+                        emailInput.parentElement.classList.add("has-error");
+                        isValid = false;
+                    }
 
-          // Reset error styles
-          [nameInput, emailInput, phoneInput, messageInput].forEach(el => {
-            el.parentElement.classList.remove("has-error");
-          });
+                    // Validate Phone
+                    if (!phoneInput.value.trim()) {
+                        phoneInput.parentElement.classList.add("has-error");
+                        isValid = false;
+                    }
 
-          // Validate Name
-          if (!nameInput.value.trim()) {
-            nameInput.parentElement.classList.add("has-error");
-            isValid = false;
-          }
+                    // Validate Message
+                    if (!messageInput.value.trim()) {
+                        messageInput.parentElement.classList.add("has-error");
+                        isValid = false;
+                    }
 
-          // Validate Email Pattern
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailRegex.test(emailInput.value.trim())) {
-            emailInput.parentElement.classList.add("has-error");
-            isValid = false;
-          }
-
-          // Validate Phone
-          if (!phoneInput.value.trim()) {
-            phoneInput.parentElement.classList.add("has-error");
-            isValid = false;
-          }
-
-          // Validate Message
-          if (!messageInput.value.trim()) {
-            messageInput.parentElement.classList.add("has-error");
-            isValid = false;
-          }
-
-          if (isValid) {
-            toast.classList.add("show");
-            contactForm.reset();
-            setTimeout(() => {
-              toast.classList.remove("show");
-            }, 4000);
-          }
+                    if (isValid) {
+                        toast.classList.add("show");
+                        contactForm.reset();
+                        setTimeout(() => {
+                            toast.classList.remove("show");
+                        }, 4000);
+                    }
+                });
+            }
         });
-      }
-    });
-  </script>
-  <!-- Mobile Sticky Footer -->
-  <div class="mobile-sticky-footer">
-    <a href="contact.html" class="sticky-btn sticky-book">Book Now</a>
-    <a href="enquire.html" class="sticky-btn sticky-enquire">Enquiry Now</a>
-  </div>
+    </script>
+    <!-- Mobile Sticky Footer -->
+    <div class="mobile-sticky-footer">
+        <a href="contact.html" class="sticky-btn sticky-book">Book Now</a>
+        <a href="enquire.html" class="sticky-btn sticky-enquire">Enquiry Now</a>
+    </div>
 </body>
-</html>
 
+</html>
